@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/of';
+import 'rxjs/add/observable/throw';
 import { Observable } from 'rxjs/Observable';
 import { User } from '../../models/user.interface';
 import { USER_LIST } from '../../mocks/user.mocks';
@@ -17,8 +19,14 @@ import { REPOSITORY_LIST } from '../../mocks/repository.mocks';
 @Injectable()
 export class GithubServiceProvider {
 
-  constructor() {
-    console.log('Hello GithubServiceProvider Provider');
+  private baseUrl: string = 'https://api.github.com/users';
+
+  constructor(private http: Http) {}
+
+  getUserInformation(username: string): Observable<User> {
+    return this.http.get(`${this.baseUrl}/${username}`)
+      .map((data: Response) => data.json()
+    );
   }
 
   mockGetUserInformation(username: string): Observable<User> {
