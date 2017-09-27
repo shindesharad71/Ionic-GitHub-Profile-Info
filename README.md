@@ -1,12 +1,12 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# Ionic GitHub Profile Info - Hybrid Mobile App
 
-## How to use this template
+My First Hybrid Mobile Application Made With Ionic 3, GitHub Profile Search Using GitHub API and Ionic 3.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+### Demo
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+![Demo](https://github.com/shindesharad71/Ionic-GitHub-Profile-Info/blob/master/demo.gif?raw=true "Demo")
 
-### With the Ionic CLI:
+### Installation Instructions - With the Ionic CLI:
 
 Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
 
@@ -18,9 +18,6 @@ $ ionic start myBlank blank
 Then, to run it, cd into `myBlank` and run:
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ ionic cordova platform add android
+$ ionic cordova run android
 ```
-
-Substitute ios for android if not on a Mac.
-
