@@ -8,14 +8,15 @@ My First Hybrid Mobile Application Made With Ionic 3, GitHub Profile Search Usin
 
 ### Installation Instructions - With the Ionic CLI:
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+Clone or Download This Repository. Then Run Following Commands Inside The Project Folder:
 
 ```bash
 $ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+$ npm install
+$ ionic lab
 ```
 
-Then, to run it, cd into `myBlank` and run:
+In Case For Running On Device:
 
 ```bash
 $ ionic cordova platform add android
