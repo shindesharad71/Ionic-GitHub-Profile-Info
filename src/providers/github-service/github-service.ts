@@ -20,6 +20,7 @@ import { REPOSITORY_LIST } from '../../mocks/repository.mocks';
 export class GithubServiceProvider {
 
   private baseUrl: string = 'https://api.github.com/users';
+  private reposUrl: string = 'repos';
 
   constructor(private http: Http) {}
 
@@ -27,6 +28,11 @@ export class GithubServiceProvider {
     return this.http.get(`${this.baseUrl}/${username}`)
       .map((data: Response) => data.json()
     );
+  }
+
+  getRepositoryInformation(username: string): Observable<Repository[]> {
+    return this.http.get(`${this.baseUrl}/${username}/${this.reposUrl}`)
+      .map((data: Response) => data.json());
   }
 
   mockGetUserInformation(username: string): Observable<User> {
