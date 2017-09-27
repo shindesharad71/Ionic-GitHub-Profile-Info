@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GithubServiceProvider } from '../../providers/github-service/github-service';
 import { User } from '../../models/user.interface';
+import { Repository } from '../../models/repository.interrface';
 
 /**
  * Generated class for the ProfileSearchResultPage page.
@@ -18,6 +19,7 @@ import { User } from '../../models/user.interface';
 export class ProfileSearchResultPage {
   username: string;
   user: User;
+  repositories: Repository[];
 
   constructor(private github: GithubServiceProvider, private navCtrl: NavController, private navParams: NavParams) {
   }
@@ -27,6 +29,8 @@ export class ProfileSearchResultPage {
       .subscribe(
         (data: User) => this.user = data
       );
+    this.github.mockGetRepositoryInformation(this.username)
+      .subscribe((data: Repository[]) =>this.repositories = data);
   }
 
   ionViewWillLoad() {
