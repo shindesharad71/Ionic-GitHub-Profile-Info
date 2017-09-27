@@ -6,6 +6,10 @@ My First Hybrid Mobile Application Made With Ionic 3, GitHub Profile Search Usin
 
 ![Demo](https://github.com/shindesharad71/Ionic-GitHub-Profile-Info/blob/master/demo.gif?raw=true "Demo")
 
+### Get APK
+
+[Get APK From Here](https://github.com/shindesharad71/Ionic-GitHub-Profile-Info/releases)
+
 ### Installation Instructions - With the Ionic CLI:
 
 Clone or Download This Repository. Then Run Following Commands Inside The Project Folder:
