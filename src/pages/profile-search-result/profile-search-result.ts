@@ -11,7 +11,9 @@ import { Repository } from '../../models/repository.interrface';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
+@IonicPage({
+  segment: 'profile/results/:username'
+})
 @Component({
   selector: 'page-profile-search-result',
   templateUrl: 'profile-search-result.html',
